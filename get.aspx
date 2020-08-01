@@ -22,7 +22,7 @@
                     URL:<br />
                     <a href="<%=view%>"><%=view%></a>
                     <% } else {
-                            Response.Write(message);
+                            //Response.Write(message);
                             Response.Redirect(view);
                         }
                     %>

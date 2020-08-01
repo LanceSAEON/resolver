@@ -15,6 +15,7 @@ namespace resolver
         protected void Page_Load(object sender, EventArgs e)
         {
             String guid = Request["guid"];
+            guid = new Guid().ToString();
             String query = "SELECT * FROM TblDOI WHERE fGUID = '" + guid.Replace("'", "''") + "'";
             //using (SqlConnection con = new SqlConnection(species.DataSources.dbConResolver))
             using (SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["Database"]))
